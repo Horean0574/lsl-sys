@@ -139,7 +139,11 @@ function randStuMain() {
             stuNum.style.display = "inline-block";
             stuNum.style.width = "40px";
             stuNum.innerHTML = rStuN.toString();
-            stuName.innerHTML = stuInfo[rStuN]["name"];
+            if (stuInfo[rStuN]["gender"] === 1) {
+                stuName.innerHTML = "烧蓝";
+            } else {
+                stuName.innerHTML = "烧烂";
+            }
             let space = stuNum.innerHTML.length === 2 ? "" : "&ensp;";
             stuNum.innerHTML = space + stuNum.innerHTML;
             stu.appendChild(stuNum);
@@ -167,7 +171,11 @@ function randStuMain() {
                     let stateNum = stateSpans[1];
                     let stateName = stateSpans[3];
                     stateNum.innerHTML = rStuN.toString();
-                    stateName.innerHTML = stuInfo[rStuN]["name"];
+                    if (stuInfo[rStuN]["gender"] === 1) {
+                        stateName.innerHTML = "烧蓝";
+                    } else {
+                        stateName.innerHTML = "烧烂";
+                    }
                     stateName.style.color = stuColor;
                     optPage.style.display = "none";
                     stuShow.style.display = "block";
